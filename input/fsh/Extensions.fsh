@@ -1,6 +1,8 @@
 Extension: AssertSubtest
 Description: "Execute a TestScript instance as a subtest"
 Id: assert-subtest
+* ^context.type = #element
+* ^context.expression = "TestScript.setup.action.assert"
 * value[x] 0..0
 * extension contains 
     testName 1..1 and
@@ -20,6 +22,8 @@ Id: assert-subtest
 Extension: AssertSubtestEach
 Description: "Execute a TestScript instance as a subtest for each of a set of inputs."
 Id: assert-subtest-each
+* ^context.type = #element
+* ^context.expression = "TestScript.setup.action.assert"
 * value[x] 0..0
 * extension contains 
     testName 1..1 and
@@ -45,6 +49,8 @@ Id: assert-subtest-each
 Extension: DynamicInput
 Description: "Input bound to a TestScript variable at execution time."
 Id: dynamic-input
+* ^context.type = #element
+* ^context.expression = "TestReport"
 * value[x] 0..0
 * extension contains 
 	variableName 1..1 and
