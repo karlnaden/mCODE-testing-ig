@@ -1,6 +1,6 @@
-## MITRE FHIR Foundry TestScript Engine IG
+## mCODE Testing IG
 
-[Current Build (Public)](https://fhir-crucible.github.io/testscript-engine-ig/)  
+[Current Build (Public)](https://karlnaden.github.io/mCODE-testing-ig/)  
 
 ### Prerequisites 
 
@@ -15,8 +15,8 @@ sushi --help
 
 ```shell
 # get a copy of the source code
-git clone https://github.com/fhir-crucible/testscript-engine-ig
-cd testscript-engine-ig
+git clone https://github.com/karlnaden/mCODE-testing-ig
+cd mCODE-testing-ig
 ```
 
 ### Compiling Documentation  
