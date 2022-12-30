@@ -6,6 +6,8 @@ To execute, the user indicates a single patient id available on the server under
 
 Note that some mCODE profiles do not have a set of search criteria that returns a tight set of resource that will be conformant (e.g., [CancerRelatedMedicationRequest](http://hl7.org/fhir/us/mcode/StructureDefinition-mcode-cancer-related-medication-request.html)). In some cases, the tests use a more general query and expect that not all returned instances will conform. In others where the number of returned instances is expected to be large and the conformant instances sparse, the tests request that individual instance ids to check be provided.
 
+Note as well that the TestScript Engine currently only has access to the first page of query results, meaning that tests of patients with large amounts of data may not behave entirely as expected, particularly for profiles where a more general query is used.
+
 #### Execution
 
 1. Install the TestScript Engine using instructions [here](https://github.com/fhir-crucible/testscript-engine#running-the-engine).
