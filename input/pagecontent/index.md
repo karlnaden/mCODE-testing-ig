@@ -4,6 +4,7 @@ Current server conformance features that can be tested include:
 - [mCODE profile search and read support](search-and-read-tests.html)
 
 Tests for additional features have been discussed and some are in progress
+- [mCODE scenario consistency](scenario-tests.html)
 - [mCODE profile element must support read](must-support-read-tests.html)
 - [mCODE profile element must support write](must-support-write-tests.html)
 
