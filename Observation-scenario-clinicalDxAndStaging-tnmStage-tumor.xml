@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="scenario-clinicalDxAndStaging-tnmStage-tumor"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Observation</b><a name="scenario-clinicalDxAndStaging-tnmStage-tumor"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation &quot;scenario-clinicalDxAndStaging-tnmStage-tumor&quot; </p></div><p><b>status</b>: final</p><p><b>category</b>: Tumor stage finding (finding) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT[Intl]</a>#385356007)</span></p><p><b>code</b>: Primary tumor.clinical [Class] Cancer <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#21905-5)</span></p><p><b>subject</b>: <a href="Patient-scenario-patient.html">Patient/scenario-patient</a> &quot; M&quot;</p><p><b>effective</b>: 2018-03-16</p><p><b>value</b>: American Joint Committee on Cancer cT3 (qualifier value) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT[Intl]</a>#1228938002)</span></p><p><b>method</b>: American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT[Intl]</a>#897275008)</span></p></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <version value="http://snomed.info/sct/900000000000207008"/>
+      <code value="385356007"/>
+      <display value="Tumor stage finding (finding)"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="21905-5"/>
+      <display value="Primary tumor.clinical [Class] Cancer"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/scenario-patient"/>
+  </subject>
+  <effectiveDateTime value="2018-03-16"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <version value="http://snomed.info/sct/900000000000207008"/>
+      <code value="1228938002"/>
+      <display value="American Joint Committee on Cancer cT3 (qualifier value)"/>
+    </coding>
+  </valueCodeableConcept>
+  <method>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <version value="http://snomed.info/sct/900000000000207008"/>
+      <code value="897275008"/>
+      <display value="American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"/>
+    </coding>
+  </method>
+</Observation>

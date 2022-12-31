@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>MCODETESTINGIG\Search and Read Tests - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link sizes="114x114" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link sizes="72x72" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"5"}
+    h3,h4,h5,h6{--heading-prefix:"5"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+          <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold"></span>
+            <br/>
+            <span style="display:inline-block;">0.0.1 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Tests
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="search-and-read-tests.html">Search and Read Tests</a>
+      </li>
+      <li>
+        <a href="scenario-tests.html">Scenario Consistency Tests</a>
+      </li>
+      <li>
+        <a href="must-support-read-tests.html">Must Support Read Tests</a>
+      </li>
+      <li>
+        <a href="must-support-write-tests.html">Must Support Write Tests</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Search and Read Tests</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">mCODETestingIG - Local Development build (v0.0.1). See the <a href="https://karlnaden.github.io/mCODE-testing-ig/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Search and Read Tests</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#usage" id="markdown-toc-usage">Usage</a></li>
+  <li><a href="#additional-options" id="markdown-toc-additional-options">Additional Options</a></li>
+  <li><a href="#status" id="markdown-toc-status">Status</a></li>
+</ul>
+
+</div>
+<p>When testing and validating a FHIR server for conformance to a particular implementation guide, one important piece of information is which IG profiles the server supports. While a server’s CapabilityStatement can list those supported, this set of tests can provide evidence of that support by identifying instances that actually conform to different profiles. To avoid the need for the user to identify an instance for each profile, the tests make use of the <a href="http://hl7.org/fhir/us/mcode/conformance-general.html#support-querying-mcode-conforming-resources">search criteria</a> the mCODE IG specifies for querying instances of each profile to search for entries of interest within the context of a provided patient. It then checks the instances returned for conformance.</p>
+
+<h3 id="usage">Usage</h3>
+
+<p>To execute, the user indicates a single patient id available on the server under test. The tests use the <a href="http://hl7.org/fhir/us/mcode/conformance-general.html#support-querying-mcode-conforming-resources">profile scope queries</a> provided in the mCODE IG to identify instances to check for conformance against the corresponding profiles. Each found instance is read and validated separately and the results documented for review later.</p>
+
+<p>Note that some mCODE profiles do not have a set of search criteria that returns a tight set of resource that will be conformant (e.g., <a href="http://hl7.org/fhir/us/mcode/StructureDefinition-mcode-cancer-related-medication-request.html">CancerRelatedMedicationRequest</a>). In some cases, the tests use a more general query and expect that not all returned instances will conform. In others where the number of returned instances is expected to be large and the conformant instances sparse, the tests request that individual instance ids to check be provided.</p>
+
+<p>Note as well that the TestScript Engine currently only has access to the first page of query results, meaning that tests of patients with large amounts of data may not behave entirely as expected, particularly for profiles where a more general query is used.</p>
+
+<h4 id="execution">Execution</h4>
+
+<ol>
+  <li>Install the TestScript Engine using instructions <a href="https://github.com/fhir-crucible/testscript-engine#running-the-engine">here</a>.</li>
+  <li>Download the <a href="mCODESearchAndReadTests.zip">execution package</a>, unzip it, and put the resulting <code class="language-plaintext highlighter-rouge">mCODESearchAndReadTests</code> folder into into the <code class="language-plaintext highlighter-rouge">testscript-engine</code> folder where you installed the engine.</li>
+  <li>Edit the <code class="language-plaintext highlighter-rouge">mCODESearchAndReadTests/test-config.yml</code> file, adjusting the following configuration keys
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">server_url</code>: The target FHIR server</li>
+      <li><code class="language-plaintext highlighter-rouge">variable</code>: update the variables to point to instances on the target FHIR server. The <code class="language-plaintext highlighter-rouge">rootus-mCODEIGPatientId=</code> entry should be set to the id of the target patient. Other entries may be updated to point it instances for the profile indicated in the variable name (<code class="language-plaintext highlighter-rouge">targetResourceId[profile name]</code>).</li>
+      <li>(optionally) update the <code class="language-plaintext highlighter-rouge">ext_validator</code> and <code class="language-plaintext highlighter-rouge">ext_fhirpath</code> variables if test data cannot be sent to a public server (see additional details <a href="search-and-read-tests.html#local-validator-and-fhirpath-support">below</a>)</li>
+    </ul>
+  </li>
+  <li>From the command line in the installed <code class="language-plaintext highlighter-rouge">testscript-engine</code> directory, execute command <code class="language-plaintext highlighter-rouge">bundle exec ruby bin/testscript_engine execute --config mCODESearchAndReadTests/test-config.yml</code></li>
+</ol>
+
+<p>If there are multiple patients that the tests should be executed against, update the <code class="language-plaintext highlighter-rouge">variable</code> entries as in step 3 and repeat step 4 for each additional patient.</p>
+
+<h4 id="interpreting-results">Interpreting Results</h4>
+
+<p>Results of the execution will be placed under the <code class="language-plaintext highlighter-rouge">mCODESearchAndReadTests/Results</code> directory. The generated files include timestamps in their paths so that multiple runs were necessary, all the results will be kept. See the TestScript Engine documentation for <a href="https://github.com/fhir-crucible/testscript-engine#feedback-and-result-interpretation">details on the output</a>.</p>
+
+<p>Assuming that all tests did not pass, which would indicate full support for all profiles, the following proceedure can be used to determine which profiles the test execution(s) verified support for:</p>
+<ol>
+  <li>Open the summary file(s) (form <code class="language-plaintext highlighter-rouge">mCODESearchAndReadTests/Results/execution_summary_[timestamp].csv</code>) using excel or another spreadsheet program. If there are multiple, consider combining them into a single file. You can do so for example by running command <code class="language-plaintext highlighter-rouge">cat mCODESearchAndReadTests/Results/execution_summary_* &gt;&gt; mCODESearchAndReadTests/Results/execution_summary_combined.csv</code>. You will need to clear out duplicate header rows, but will otherwise have all the results. Clear out execution summary files you don’t want to include before running the command.</li>
+  <li>Sort by <code class="language-plaintext highlighter-rouge">title</code> column.</li>
+  <li>For each profile that is expected to be supported, filter the list to just those tests for that profile using a text filter on the <code class="language-plaintext highlighter-rouge">title</code> column.
+    <ul>
+      <li>If all tests in the filtered list passed, then support for the profile was validated</li>
+      <li>If some tests in the filtered list failed, but the <code class="language-plaintext highlighter-rouge">mustPass?</code> column is false, then check to make sure the failed test were on instances that should actually conform to the profile. These are cases where the query was not guaranteed to return only instances conformant to the target profile.</li>
+      <li>If all tests in the filtered list failed, then open the corresponding reports indicated in the <code class="language-plaintext highlighter-rouge">testReportFilePath</code> column to get more information (text search for <code class="language-plaintext highlighter-rouge">fail</code> to find error messages).</li>
+      <li>If no tests remained in the filtered list, then the filter query(s) returned no instances to test and the query should be run outside of the context of the test to determine what is happening.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>See other ideas for interpretation approaches <a href="https://github.com/fhir-crucible/testscript-engine#interpretation-approach">here</a>.</p>
+
+<h3 id="additional-options">Additional Options</h3>
+
+<p>The above approach to usage and execution provides a “happy path” that will work for most systems. For some systems, the following options may make more sense.</p>
+
+<h4 id="local-validator-and-fhirpath-support">Local Validator and FHIRPath Support</h4>
+
+<p>The MITRE FHIR Foundry <a href="https://github.com/fhir-crucible/testscript-engine">TestScript Engine</a> relies on Inferno’s <a href="https://github.com/inferno-framework/fhir-validator-wrapper">fhir-validator-wrapper</a> and by default is configured to send instances and queries to the <a href="https://inferno.healthit.gov/validator/">ONC-hosted version</a>. If the system under test contains PHI or other sensitive data, a local copy of the validator should be deployed using instructions <a href="https://github.com/inferno-framework/fhir-validator-wrapper">here</a>. In order to point the TestScript Engine to the local copy, update the <code class="language-plaintext highlighter-rouge">ext_validator</code> and <code class="language-plaintext highlighter-rouge">ext_fhirpath</code> configuration keys in the <code class="language-plaintext highlighter-rouge">test-config.yml</code> file with the local host and port.</p>
+
+<h4 id="test-data">Test Data</h4>
+
+<p>These tests take a “bring your own data” approach for several reasons</p>
+<ol>
+  <li>Write capabilities are not always supported for all resources that can be read.</li>
+  <li>For system that support data entry through a UI, it is beneficial to validate the data that they generate.</li>
+</ol>
+
+<p>Systems that do not generate their own data can load <a href="http://hl7.org/fhir/us/mcode/examples.html">mCODE IG sample data</a> for use with these tests, though these instances do not all pass validation without modification (e.g., due to example domains in identifiers). <a href="mcode-patient-bundle-jenny-m_transactionBundle_preSTU3-2022-12-16.json">This Bundle instance</a> contains all data from the extended Jenny M example and successfully loads on the <a href="http://hapi.fhir.org/">HAPI test server</a>.</p>
+
+<h4 id="specific-instances-execution-mode">Specific-instances Execution Mode</h4>
+
+<p>Systems that don’t support query functionality may still want to validate support for specific profiles. In specific-instances mode, the user provides a instance id for each profile to read and check. This bypasses the search and any uncertainty there, but requires up-front work to identify specific instances to provide to the test execution. Each specified instance is read and validated separately and the results documented for review later.</p>
+
+<p>To execute using this mode, make the following modifications to the execution instructions described <a href="search-and-read-tests.html#execution">above</a></p>
+<ul>
+  <li>In step 2,
+    <ul>
+      <li>Remove the <code class="language-plaintext highlighter-rouge">mCODESearchAndReadTests/TestScripts/UsMCODESearchAndReadProfilesFromRootPatient.json</code> file</li>
+    </ul>
+  </li>
+  <li>In step 3,
+    <ul>
+      <li>Remove the value from configuration key <code class="language-plaintext highlighter-rouge">testscript_name</code></li>
+      <li>Replace the list under the <code class="language-plaintext highlighter-rouge">variable</code> configuration key with this list and replace the values as described. No specific root patient is needed in this case</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  - targetResourceIdCancerDiseaseStatus=cancer-disease-status-jenny-m
+  - targetResourceIdCancerPatient=cancer-patient-jenny-m
+  - targetResourceIdCancerRelatedMedicationAdministration=TODO
+  - targetResourceIdCancerRelatedMedicationRequest=cancer-related-medication-request-paclitaxel-jenny-m
+  - targetResourceIdCancerRelatedSurgicalProcedure=cancer-related-surgical-procedure-jenny-m
+  - targetResourceIdCancerStageGroup=TODO
+  - targetResourceIdComorbidities=cancer-related-comorbidities-jenny-m
+  - targetResourceIdECOGPerformanceStatus=ecog-performance-status-jenny-m
+  - targetResourceIdGenomicRegionStudied=genomic-region-studied-jenny-m
+  - targetResourceIdGenomicsReport=genomics-report-jenny-m
+  - targetResourceIdGenomicVariant=genomic-variant-jenny-m
+  - targetResourceIdHumanSpecimen=tumor-specimen-left-breast-jenny-m
+  - targetResourceIdKarnofskyPerformanceStatus=TODO
+  - targetResourceIdMCODEPatientBundle=TODO
+  - targetResourceIdMCODEPatientGroup=TODO
+  - targetResourceIdPrimaryCancerCondition=primary-cancer-condition-jenny-m
+  - targetResourceIdRadiotherapyCourseSummary=radiotherapy-treatment-summary-chest-wall-jenny-m
+  - targetResourceIdRadiotherapyVolume=TODO
+  - targetResourceIdSecondaryCancerCondition=TODO
+  - targetResourceIdTNMDistantMetastasesCategory=tnm-clinical-distant-metastases-category-jenny-m
+  - targetResourceIdTNMPrimaryTumorCategory=tnm-clinical-primary-tumor-category-jenny-m
+  - targetResourceIdTNMRegionalNodesCategory=tnm-pathologic-regional-nodes-category-jenny-m
+  - targetResourceIdTNMStageGroup=tnm-clinical-stage-group-jenny-m
+  - targetResourceIdTumorMarkerTest=tumor-marker-test-er-jenny-m
+  - targetResourceIdTumor=TODO
+  - targetResourceIdTumorSize=tumor-size-jenny-m
+</code></pre></div></div>
+
+<p>Interpret as explained <a href="search-and-read-tests.html#interpreting-results">above</a>.</p>
+
+<h4 id="execution-on-other-testscript-enabled-systems">Execution on Other TestScript-enabled Systems</h4>
+
+<p>These execution instructions assume that the MITRE FHIR Foundry <a href="https://github.com/fhir-crucible/testscript-engine">TestScript Engine</a> is being used. However, the specific-instances mode does not use any implementation-specific instructions, so could be executed on other TestScript-enabled platforms. Refer to the documentation of those platforms for how to load and execute the tests and access and interpret the results.</p>
+
+<h4 id="generation-for-other-mcode-versions">Generation for Other mCODE versions</h4>
+
+<p><a name="l562">​</a>The tests available on this page were generated by the MITRE FHIR Foundry <a href="https://github.com/fhir-crucible/testscript-generator">TestScript Generator</a>, specifically the <a href="https://github.com/fhir-crucible/testscript-generator#profile-read-tests">profile read tests</a>. They were generated from and target the mCODE pre-STU3 build version as of mid-December 2022 (<a href="http://build.fhir.org/ig/HL7/fhir-mCODE-ig/">current build version</a>), using the following assets:</p>
+<ul>
+  <li>package file containing StructureDefinition instances: <a href="package-us-mCODE-preSTU3-2022-12-16.tgz">package-us-mCODE-preSTU3-2022-12-16.tgz</a></li>
+  <li>Profile scope queries encoding: <a href="profile_scope_search_spec-us-mCODE-preSTU3-2022-12-16.csv">profile_scope_search_spec-us-mCODE-preSTU3-2022-12-16.csv</a></li>
+</ul>
+
+<p>Using the TestScript Generator, it is possible to create similar tests for other mCODE IG versions. Instructions follow:</p>
+<ol>
+  <li>Gather materials for generation
+    <ul>
+      <li>Obtain the <code class="language-plaintext highlighter-rouge">package.tgz</code> file with StructureDefinition files defining the profiles from the downloads page (e.g., http://hl7.org/fhir/us/mcode/downloads.html for the current published version)</li>
+      <li><a name="l602">​</a>Create the <code class="language-plaintext highlighter-rouge">profile_scope_search_spec.csv</code> file (format described <a href="https://github.com/fhir-crucible/testscript-generator#profile-read-tests">here</a>) with the correct list of profiles and search criteria for them using the <a href="http://build.fhir.org/ig/HL7/fhir-mCODE-ig/conformance-general.html#support-querying-mcode-conforming-resources">Support Querying mCODE-Conforming Resources</a> and additional information on the individual profile pages. See the version created for pre-STU3 tests <a href="profile_scope_search_spec-us-mCODE-preSTU3-2022-12-16.csv">here</a> as an example.</li>
+    </ul>
+  </li>
+  <li>Install, configure, and run the <a href="https://github.com/fhir-crucible/testscript-generator">TestScript Generator</a>
+    <ul>
+      <li>Install using <a href="https://github.com/fhir-crucible/testscript-generator#running-the-generator">these instructions</a></li>
+      <li>Clear out the <code class="language-plaintext highlighter-rouge">igs</code> directory</li>
+      <li>Rename the <code class="language-plaintext highlighter-rouge">package.tgz</code> file to <code class="language-plaintext highlighter-rouge">us-mCODE.tgz</code> and place it in the cleared <code class="language-plaintext highlighter-rouge">igs</code> directory</li>
+      <li>Place the created <code class="language-plaintext highlighter-rouge">profile_scope_search_spec.csv</code> file into directory <code class="language-plaintext highlighter-rouge">extra_input/us-mCODE</code> directory</li>
+      <li>From the command line in the installed <code class="language-plaintext highlighter-rouge">testscript-generator</code> directory, execute command <code class="language-plaintext highlighter-rouge">bundle exec bin/testscript_generator read</code></li>
+    </ul>
+  </li>
+  <li>Create execution package
+    <ul>
+      <li>Download and extract <a href="mCODESearchAndReadTests.zip">this execution package</a> to use as a template or use a copy that you have modified with your own configuration already.</li>
+      <li>Clear the <code class="language-plaintext highlighter-rouge">mCODESearchAndReadTests/TestScripts</code> and <code class="language-plaintext highlighter-rouge">mCODESearchAndReadTests/Profiles</code> folders.</li>
+      <li>Take the generated tests from <code class="language-plaintext highlighter-rouge">[testscript-generator-root]/generated_testscripts/us-mCode/ReadProfileTemplate</code> and put them into template folder <code class="language-plaintext highlighter-rouge">mCODESearchAndReadTests/TestScripts</code>.</li>
+      <li>Extract the <code class="language-plaintext highlighter-rouge">us-mCODE.tgz</code> file and put all <code class="language-plaintext highlighter-rouge">StructureDefinition-*.json</code> files into template folder <code class="language-plaintext highlighter-rouge">mCODESearchAndReadTests/Profiles</code></li>
+      <li>If you marked any profiles as requiring the target id to be specified in the <code class="language-plaintext highlighter-rouge">profile_scope_search_spec.csv</code>, then add the profile-specific id variable (<code class="language-plaintext highlighter-rouge">targetResourceId[profile name]</code>) to the list in the <code class="language-plaintext highlighter-rouge">test-config.yml</code> file under the <code class="language-plaintext highlighter-rouge">variable</code> section so users know to specify a value.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>With those steps, you can use the updated template to execute the tests as described above.</p>
+
+<h3 id="status">Status</h3>
+
+<p>These tests are complete and usable as described <a href="search-and-read-tests.html#execution">above</a>. Work remains on helping users to execute and interpret the results. Feedback and ideas welcome.</p>
+
+
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &copy; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://karlnaden.github.io/mCODE-testing-ig">MITRE</a>.  Package mcodetestingig#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Dec 31, 2022 05:18+0000">2022-12-31</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+  
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+  <!-- feedback form - Google forms -->
+  <!-- v0.1, 2021-01-09 -->
+
+
+
+  <!-- / feedback form -->
+
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>MCODETESTINGIG\Must Support Read Tests - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold"></span>
+            <br/>
+            <span style="display:inline-block;">0.0.1 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Tests
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="search-and-read-tests.html">Search and Read Tests</a>
+      </li>
+      <li>
+        <a href="scenario-tests.html">Scenario Consistency Tests</a>
+      </li>
+      <li>
+        <a href="must-support-read-tests.html">Must Support Read Tests</a>
+      </li>
+      <li>
+        <a href="must-support-write-tests.html">Must Support Write Tests</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Must Support Read Tests</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">mCODETestingIG - Local Development build (v0.0.1). See the <a href="https://karlnaden.github.io/mCODE-testing-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Must Support Read Tests</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#usage" id="markdown-toc-usage">Usage</a></li>
+  <li><a href="#status" id="markdown-toc-status">Status</a></li>
+</ul>
+
+</div>
+<p>FHIR Implementation Guides use the <code class="language-plaintext highlighter-rouge">MustSupport</code> flag to indicate elements that are important and need to be supported even if they are not required because they aren’t pertinent in all cases or for all uses. The mCODE IG provides a <a href="http://hl7.org/fhir/us/mcode/conformance-profiles.html#must-implement-versus-must-support">precise definition</a> of what <code class="language-plaintext highlighter-rouge">MustSupport</code> connotes within the context of the IG. This definition is complex and nuanced and difficult to completely evaluate and test.</p>
+
+<p>These tests aim lower. They aim to validate which <code class="language-plaintext highlighter-rouge">MustSupport</code> elements a server can actually produce, meaning populate in a conformant way on at least one profile-conformant resource instance. The idea is that this provides validation of support for a set of <code class="language-plaintext highlighter-rouge">MustSupport</code> element. This can be used</p>
+<ul>
+  <li>By implementers to check for gaps in their expectations.</li>
+  <li>By integration partners to check for gaps in mutual support</li>
+</ul>
+
+<p>Since the goal is to test what the server can produce, data entry should be done in the way(s) that will be typical for data to enter the system, whether that be manual data entry or integration, via FHIR or otherwise.</p>
+
+<h3 id="usage">Usage</h3>
+
+<h4 id="execution">Execution</h4>
+
+<ol>
+  <li>Install the TestScript Engine using instructions <a href="https://github.com/fhir-crucible/testscript-engine#running-the-engine">here</a>.</li>
+  <li>Download the <a href="mCODEMustSupportTests.zip">execution package</a>, unzip it, and put the resulting <code class="language-plaintext highlighter-rouge">mCODEMustSupportTests</code> folder into the <code class="language-plaintext highlighter-rouge">testscript-engine</code> folder where you installed the engine.</li>
+  <li>Edit the <code class="language-plaintext highlighter-rouge">mCODEMustSupportTests/test-config.yml</code> file, adjusting the following configuration keys
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">server_url</code>: The target FHIR server</li>
+      <li><code class="language-plaintext highlighter-rouge">variable</code>: update the variables to point to instances on the target FHIR server. Each entry may be updated to point it instances for the profile indicated in the variable name (<code class="language-plaintext highlighter-rouge">targetResourceId[profile name]</code>).</li>
+      <li>(optionally) update the <code class="language-plaintext highlighter-rouge">ext_validator</code> and <code class="language-plaintext highlighter-rouge">ext_fhirpath</code> variables if test data cannot be sent to a public server (see additional details <a href="search-and-read-tests.html#local-validator-and-fhirpath-support">here</a>)</li>
+    </ul>
+  </li>
+  <li>From the command line in the installed <code class="language-plaintext highlighter-rouge">testscript-engine</code> directory, execute command <code class="language-plaintext highlighter-rouge">bundle exec ruby bin/testscript_engine execute --config mCODEMustSupportTests/test-config.yml</code></li>
+</ol>
+
+<p>The above steps will execute all tests for all profiles. There are two ways to configure a smaller scope in the<code class="language-plaintext highlighter-rouge">mCODEMustSupportTests/test-config.yml</code> file:</p>
+<ul>
+  <li>Update the <code class="language-plaintext highlighter-rouge">testscript_path</code> key to <code class="language-plaintext highlighter-rouge">mCODEMustSupportTests/TestScripts/[profile name]</code> to execute only tests for a specific profile. In this case, only the corresponding profile’s variable is used and needs to be set. Revert back to <code class="language-plaintext highlighter-rouge">mCODEMustSupportTests/TestScripts</code> to execute all tests.</li>
+  <li>Update the <code class="language-plaintext highlighter-rouge">testscript_name</code> key to a specific TestScript <code class="language-plaintext highlighter-rouge">name</code> to execute only a specific test. Must be found within the <code class="language-plaintext highlighter-rouge">testscript_path</code></li>
+</ul>
+
+<h4 id="results-interpretation">Results Interpretation</h4>
+
+<p>Results of the execution will be placed under the <code class="language-plaintext highlighter-rouge">mCODEMustSupportTests/Results</code> directory. The generated files include timestamps in their paths so that multiple runs were necessary, all the results will be kept. See the TestScript Engine documentation for <a href="https://github.com/fhir-crucible/testscript-engine#feedback-and-result-interpretation">details on the output</a>.</p>
+
+<p>Assuming that all tests did not pass, which would indicate full support for all must support elements across all profiles (not currently possible), the following proceedure can be used to determine which must support elements on which profiles the test execution(s) verified support for:</p>
+<ol>
+  <li>Open the summary file(s) (form <code class="language-plaintext highlighter-rouge">mCODEMustSupportTests/Results/execution_summary_[timestamp].csv</code>) using excel or another spreadsheet program. If there are multiple, consider combining them into a single file. You can do so for example by running command <code class="language-plaintext highlighter-rouge">cat mCODEMustSupportTests/Results/execution_summary_* &gt;&gt; mCODEMustSupportTests/Results/execution_summary_combined.csv</code>. You will need to clear out duplicate header rows, but will otherwise have all the results. Clear out execution summary files you don’t want to include before running the command.</li>
+  <li>Sort by <code class="language-plaintext highlighter-rouge">title</code> column.</li>
+  <li>For each profile and element that is expected to be supported, filter the list to just those tests for that profile using a text filter on the <code class="language-plaintext highlighter-rouge">title</code> column.
+    <ul>
+      <li>If any tests in the filtered list passed, then support for the element was validated</li>
+      <li>If all tests in the filtered list failed, then open the corresponding reports indicated in the <code class="language-plaintext highlighter-rouge">testReportFilePath</code> column to get more information (text search for <code class="language-plaintext highlighter-rouge">fail</code> to find error messages).</li>
+    </ul>
+  </li>
+</ol>
+
+<p>See other ideas for interpretation approaches <a href="https://github.com/fhir-crucible/testscript-engine#interpretation-approach">here</a>.</p>
+
+<h3 id="status">Status</h3>
+
+<p>These tests are a work in progress. While they can be executed as is, they are ready only for limited proof-of-concept work because</p>
+<ol>
+  <li>Instance ids must be specified for each profile.</li>
+  <li>Some tests will fail.
+    <ul>
+      <li>There may be bugs.</li>
+      <li>Some must support patterns, such as required profiles on multiple response items, or multiple options for profiles, are not currently supported and the generated tests will always fail.</li>
+      <li>Other patterns currently use FHIRPath features, such as checking membership in a value set, that aren’t supported by the FHIRPath options supported by the TestScript Engine.</li>
+    </ul>
+  </li>
+  <li>The feedback and interpretation mechanisms are still in progress.</li>
+</ol>
+
+<p>Features in the TestScript Engine could provide ways past some of these problems with an investment of time. Feedback on whether these test would be helpful to implementers if improved welcome.</p>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://karlnaden.github.io/mCODE-testing-ig">MITRE</a>.  Package mcodetestingig#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Dec 31, 2022 05:18+0000">2022-12-31</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

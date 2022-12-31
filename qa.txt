@@ -1,0 +1,45 @@
+﻿mCODETestingIG : Validation Results
+=========================================
+
+err = 7, warn = 5, info = 6
+IG Publisher Version: 1.2.25
+Generated Sat Dec 31 05:18:43 UTC 2022. FHIR version 4.0.1 for mcodetestingig#0.0.1 (canonical = https://karlnaden.github.io/mCODE-testing-ig)
+ Build Errors : 2 / 4 / 0
+ /github/workspace/fsh-generated/resources/Condition-scenario-clinicalDxAndStaging-primaryCondition : 3 / 0 / 1
+ /github/workspace/fsh-generated/resources/ImplementationGuide-mcodetestingig : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/Observation-scenario-clinicalDxAndStaging-tnmStage : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Observation-scenario-clinicalDxAndStaging-tnmStage-distantMetastases : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Observation-scenario-clinicalDxAndStaging-tnmStage-regionalLymphNodes : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Observation-scenario-clinicalDxAndStaging-tnmStage-tumor : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Patient-scenario-patient : 4 / 0 / 3
+ /github/workspace/fsh-generated/resources/Practitioner-scenario-oncologist : 0 / 0 / 1
+</table>
+== n/a ==
+ERROR: /github/workspace/output/search-and-read-tests.html#/html/body/div/div/div/div/div/p/a at Line 277, column 387: The link 'http://build.fhir.org/ig/HL7/fhir-mCODE-ig/' for "current build version" cannot be resolved
+ERROR: /github/workspace/output/search-and-read-tests.html#/html/body/div/div/div/div/div/ol/li/ul/li/a at Line 288, column 300: The link 'http://build.fhir.org/ig/HL7/fhir-mCODE-ig/conformance-general.html#support-querying-mcode-conforming-resources' for "Support Querying mCODE-Conforming Resources" cannot be resolved
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/Condition-scenario-clinicalDxAndStaging-primaryCondition.json ==
+ERROR: Condition/scenario-clinicalDxAndStaging-primaryCondition: Condition.extension[0]: The extension http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-histology-morphology-behavior is unknown, and not allowed here
+ERROR: Condition/scenario-clinicalDxAndStaging-primaryCondition: Condition.extension[0].url: URL value 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-histology-morphology-behavior' does not resolve
+ERROR: Condition/scenario-clinicalDxAndStaging-primaryCondition: Condition.stage[0].summary.coding[0]: Local Error: Unable to resolve system http://snomed.info/sct. Server Error: Unable to find code 1222806001 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20220731); The code "1222806001" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#1222806001) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#1222806001'
+== fsh-generated/resources/ImplementationGuide-mcodetestingig.json ==
+WARNING: ImplementationGuide/mcodetestingig: ImplementationGuide: Rule ig-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
+== fsh-generated/resources/Observation-scenario-clinicalDxAndStaging-tnmStage.json ==
+INFORMATION: Observation/scenario-clinicalDxAndStaging-tnmStage: Observation.category[0]: None of the codings provided are in the value set 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), and a coding is recommended to come from this value set) (codes = http://snomed.info/sct#385356007)
+== fsh-generated/resources/Observation-scenario-clinicalDxAndStaging-tnmStage-distantMetastases.json ==
+INFORMATION: Observation/scenario-clinicalDxAndStaging-tnmStage-distantMetastases: Observation.category[0]: None of the codings provided are in the value set 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), and a coding is recommended to come from this value set) (codes = http://snomed.info/sct#385356007)
+== fsh-generated/resources/Observation-scenario-clinicalDxAndStaging-tnmStage-regionalLymphNodes.json ==
+INFORMATION: Observation/scenario-clinicalDxAndStaging-tnmStage-regionalLymphNodes: Observation.category[0]: None of the codings provided are in the value set 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), and a coding is recommended to come from this value set) (codes = http://snomed.info/sct#385356007)
+== fsh-generated/resources/Observation-scenario-clinicalDxAndStaging-tnmStage-tumor.json ==
+INFORMATION: Observation/scenario-clinicalDxAndStaging-tnmStage-tumor: Observation.category[0]: None of the codings provided are in the value set 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), and a coding is recommended to come from this value set) (codes = http://snomed.info/sct#385356007)
+== fsh-generated/resources/Patient-scenario-patient.json ==
+ERROR: Patient/scenario-patient: Patient.extension[0]: The extension http://hl7.org/fhir/us/core/StructureDefinition/us-core-race is unknown, and not allowed here
+INFORMATION: Patient/scenario-patient: Patient.extension[0].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+ERROR: Patient/scenario-patient: Patient.extension[0].url: URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-race' does not resolve
+ERROR: Patient/scenario-patient: Patient.extension[1]: The extension http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity is unknown, and not allowed here
+INFORMATION: Patient/scenario-patient: Patient.extension[1].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+ERROR: Patient/scenario-patient: Patient.extension[1].url: URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity' does not resolve
+== fsh-generated/resources/Practitioner-scenario-oncologist.json ==

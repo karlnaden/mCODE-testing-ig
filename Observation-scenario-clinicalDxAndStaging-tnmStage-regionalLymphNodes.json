@@ -1,0 +1,44 @@
+{
+  "resourceType" : "Observation",
+  "id" : "scenario-clinicalDxAndStaging-tnmStage-regionalLymphNodes",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"scenario-clinicalDxAndStaging-tnmStage-regionalLymphNodes\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;scenario-clinicalDxAndStaging-tnmStage-regionalLymphNodes&quot; </p></div><p><b>status</b>: final</p><p><b>category</b>: Tumor stage finding (finding) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT[Intl]</a>#385356007)</span></p><p><b>code</b>: Regional lymph nodes.clinical [Class] Cancer <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#21906-3)</span></p><p><b>subject</b>: <a href=\"Patient-scenario-patient.html\">Patient/scenario-patient</a> &quot; M&quot;</p><p><b>effective</b>: 2018-03-16</p><p><b>value</b>: American Joint Committee on Cancer cN0 (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT[Intl]</a>#1229967007)</span></p><p><b>method</b>: American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT[Intl]</a>#897275008)</span></p></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008",
+      "code" : "385356007",
+      "display" : "Tumor stage finding (finding)"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "21906-3",
+      "display" : "Regional lymph nodes.clinical [Class] Cancer"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/scenario-patient"
+  },
+  "effectiveDateTime" : "2018-03-16",
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008",
+      "code" : "1229967007",
+      "display" : "American Joint Committee on Cancer cN0 (qualifier value)"
+    }]
+  },
+  "method" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008",
+      "code" : "897275008",
+      "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
+    }]
+  }
+}

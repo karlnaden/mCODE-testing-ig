@@ -1,0 +1,116 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://karlnaden.github.io/mCODE-testing-ig/Condition/scenario-clinicalDxAndStaging-primaryCondition> a fhir:Condition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "scenario-clinicalDxAndStaging-primaryCondition"]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Condition</b><a name=\"scenario-clinicalDxAndStaging-primaryCondition\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Condition &quot;scenario-clinicalDxAndStaging-primaryCondition&quot; </p></div><p><b>clinicalStatus</b>: Active <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-condition-clinical.html\">Condition Clinical Status Codes</a>#active)</span></p><p><b>verificationStatus</b>: Confirmed <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-condition-ver-status.html\">ConditionVerificationStatus</a>#confirmed)</span></p><p><b>category</b>: Problem List Item <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-condition-category.html\">Condition Category Codes</a>#problem-list-item)</span>, Primary malignant neoplasm (disorder) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT[Intl]</a>#372087000)</span></p><p><b>code</b>: Primary malignant neoplasm of female left breast (disorder) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT[Intl]</a>#353431000119107)</span></p><p><b>subject</b>: <a href=\"Patient-scenario-patient.html\">Patient/scenario-patient</a> &quot; M&quot;</p><p><b>onset</b>: 2018-03-16</p><p><b>asserter</b>: <a href=\"Practitioner-scenario-oncologist.html\">Practitioner/scenario-oncologist</a> &quot; ONCOLOGIST&quot;</p><h3>Stages</h3><table class=\"grid\"><tr><td>-</td><td><b>Summary</b></td><td><b>Assessment</b></td><td><b>Type</b></td></tr><tr><td>*</td><td>American Joint Committee on Cancer stage IIB (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT[Intl]</a>#1222806001)</span></td><td><a href=\"Observation-scenario-clinicalDxAndStaging-tnmStage.html\">Observation/scenario-clinicalDxAndStaging-tnmStage</a></td><td>American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT[Intl]</a>#897275008)</span></td></tr></table></div>"
+  ]; # 
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-histology-morphology-behavior" ];
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:413448000;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.version [ fhir:value "http://snomed.info/sct/900000000000207008" ];
+         fhir:Coding.code [ fhir:value "413448000" ];
+         fhir:Coding.display [ fhir:value "Adenocarcinoma, no subtype, intermediate grade (morphologic abnormality)" ]
+       ]
+     ]
+  ]; # 
+  fhir:Condition.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ];
+       fhir:Coding.code [ fhir:value "active" ]
+     ]
+  ]; # 
+  fhir:Condition.verificationStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-ver-status" ];
+       fhir:Coding.code [ fhir:value "confirmed" ]
+     ]
+  ]; # 
+  fhir:Condition.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-category" ];
+       fhir:Coding.code [ fhir:value "problem-list-item" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:372087000;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.version [ fhir:value "http://snomed.info/sct/900000000000207008" ];
+       fhir:Coding.code [ fhir:value "372087000" ];
+       fhir:Coding.display [ fhir:value "Primary malignant neoplasm (disorder)" ]
+     ]
+  ]; # 
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:353431000119107;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.version [ fhir:value "http://snomed.info/sct/900000000000207008" ];
+       fhir:Coding.code [ fhir:value "353431000119107" ];
+       fhir:Coding.display [ fhir:value "Primary malignant neoplasm of female left breast (disorder)" ]
+     ]
+  ]; # 
+  fhir:Condition.subject [
+     fhir:link <https://karlnaden.github.io/mCODE-testing-ig/Patient/scenario-patient>;
+     fhir:Reference.reference [ fhir:value "Patient/scenario-patient" ]
+  ]; # 
+  fhir:Condition.onsetDateTime [ fhir:value "2018-03-16"^^xsd:date]; # 
+  fhir:Condition.asserter [
+     fhir:link <https://karlnaden.github.io/mCODE-testing-ig/Practitioner/scenario-oncologist>;
+     fhir:Reference.reference [ fhir:value "Practitioner/scenario-oncologist" ]
+  ]; # 
+  fhir:Condition.stage [
+     fhir:index 0;
+     fhir:Condition.stage.summary [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:1222806001;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.version [ fhir:value "http://snomed.info/sct/900000000000207008" ];
+         fhir:Coding.code [ fhir:value "1222806001" ];
+         fhir:Coding.display [ fhir:value "American Joint Committee on Cancer stage IIB (qualifier value)" ]
+       ]
+     ];
+     fhir:Condition.stage.assessment [
+       fhir:index 0;
+       fhir:link <https://karlnaden.github.io/mCODE-testing-ig/Observation/scenario-clinicalDxAndStaging-tnmStage>;
+       fhir:Reference.reference [ fhir:value "Observation/scenario-clinicalDxAndStaging-tnmStage" ]
+     ];
+     fhir:Condition.stage.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:897275008;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.version [ fhir:value "http://snomed.info/sct/900000000000207008" ];
+         fhir:Coding.code [ fhir:value "897275008" ];
+         fhir:Coding.display [ fhir:value "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)" ]
+       ]
+     ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<https://karlnaden.github.io/mCODE-testing-ig/Condition/scenario-clinicalDxAndStaging-primaryCondition.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,82 @@
+{
+  "resourceType" : "Patient",
+  "id" : "scenario-patient",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Jenny M </b> female, DoB: 1965-01-01 ( Medical Record Number: MRN1234 (use: USUAL))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail:</td><td colspan=\"3\">123 Main St Anytown 12345 United States </td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Languages spoken\">Language:</td><td colspan=\"3\"><span title=\"Codes: {urn:ietf:bcp:47 en-US}\">English</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient contact\">Contact</td><td colspan=\"3\"><ul><li>ph: 555-867-5309(HOME)</li><li><a href=\"mailto:example@example.com\">example@example.com</a></li></ul></td></tr></table></div>"
+  },
+  "extension" : [{
+    "extension" : [{
+      "url" : "ombCategory",
+      "valueCoding" : {
+        "system" : "urn:oid:2.16.840.1.113883.6.238",
+        "code" : "2106-3",
+        "display" : "White"
+      }
+    },
+    {
+      "url" : "text",
+      "valueString" : "White"
+    }],
+    "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+  },
+  {
+    "extension" : [{
+      "url" : "ombCategory",
+      "valueCoding" : {
+        "system" : "urn:oid:2.16.840.1.113883.6.238",
+        "code" : "2186-5",
+        "display" : "Not Hispanic or Latino"
+      }
+    },
+    {
+      "url" : "text",
+      "valueString" : "Not Hispanic or Latino"
+    }],
+    "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+  }],
+  "identifier" : [{
+    "use" : "usual",
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "MR",
+        "display" : "Medical Record Number"
+      }]
+    },
+    "system" : "http://hospital.example.org",
+    "value" : "MRN1234"
+  }],
+  "name" : [{
+    "family" : "M",
+    "given" : ["Jenny"]
+  }],
+  "gender" : "female",
+  "birthDate" : "1965-01-01",
+  "address" : [{
+    "line" : ["123 Main St"],
+    "city" : "Anytown",
+    "postalCode" : "12345",
+    "country" : "United States"
+  }],
+  "contact" : [{
+    "telecom" : [{
+      "system" : "phone",
+      "value" : "555-867-5309",
+      "use" : "home"
+    },
+    {
+      "system" : "email",
+      "value" : "example@example.com"
+    }]
+  }],
+  "communication" : [{
+    "language" : {
+      "coding" : [{
+        "system" : "urn:ietf:bcp:47",
+        "code" : "en-US"
+      }],
+      "text" : "English"
+    }
+  }]
+}

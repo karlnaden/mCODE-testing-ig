@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>MCODETESTINGIG\Scenario Tests - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold"></span>
+            <br/>
+            <span style="display:inline-block;">0.0.1 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Tests
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="search-and-read-tests.html">Search and Read Tests</a>
+      </li>
+      <li>
+        <a href="scenario-tests.html">Scenario Consistency Tests</a>
+      </li>
+      <li>
+        <a href="must-support-read-tests.html">Must Support Read Tests</a>
+      </li>
+      <li>
+        <a href="must-support-write-tests.html">Must Support Write Tests</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Scenario Tests</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">mCODETestingIG - Local Development build (v0.0.1). See the <a href="https://karlnaden.github.io/mCODE-testing-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Scenario Tests</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#target-scenario" id="markdown-toc-target-scenario">Target Scenario</a></li>
+  <li><a href="#potential-representation" id="markdown-toc-potential-representation">Potential Representation</a></li>
+  <li><a href="#challenges-and-open-questions" id="markdown-toc-challenges-and-open-questions">Challenges and Open Questions</a></li>
+</ul>
+
+</div>
+<p>Standards seek to improve the reliability and reduce the cost of system interoperability. One way in which they do so is by providing a single set of data structures that different systems can all use to represent the same information. If a standard is to achieve its goal, then a critical property that different implementations represent the same information consistently within the language the standard. Imagine one provider evaluating a patient and documenting their findings within two different mCODE-enabled systems. In that situation, the FHIR representation made available by the two systems should closely coincide (certainly in terms of the clinical content, system metadata and specific timestamps will still differ). Achieving this property across all mCODE server would enable clients consuming data from these servers to handle all servers uniformly, greatly reducing the cost of interoperability with any of them (in contrast, if there are meaningful, but unknown differences, significant effort must be spent when connecting two systems to identify and handle the discrepancies).</p>
+
+<p>In practice, it will not be possible to guarantee that all mCODE server implementations represent all scenarios covered by mCODE in a highly consistent way. However, confirming this property for some scenarios would help to further clarify the intended encoding of information covered by the IG and establish a “fixed point” of consistency across implementations that would likely result in a higher degree of consistency and lower integration costs overall.</p>
+
+<p>Exploring the design space and challenges of these <em>scenario consistency tests</em> is the goal of this set of tests. At this time, they are still in the exploration phase, with</p>
+<ul>
+  <li>an initial scenario to target</li>
+  <li>a potential representation of that scneario in mCODE</li>
+  <li>notional ideas about challenges of this sort of testing</li>
+</ul>
+
+<p>Feedback welcome on all of these, in particular in the form of a mCODE representation of the scenario from an mCODE compliant system.</p>
+
+<h3 id="target-scenario">Target Scenario</h3>
+
+<p><strong>Oncologist Adding Clinical Staging Information to Cancer Dx</strong></p>
+
+<p><em>mCODE IG description</em>: The patient is referred to an oncologist who clinically reviews the mammogram and tumor marker results, and clinically staged the [breast] cancer diagnosis as cT3N0 (from the mCODE <a href="http://hl7.org/fhir/us/mcode/examples.html">extended example</a>).</p>
+
+<p><em>Detailed data description</em></p>
+<ul>
+  <li>Cancer Diagnosis details:
+    <ul>
+      <li>Problem list entry</li>
+      <li>For a Primary malignant neoplasm of female left breast</li>
+      <li>Verification: confirmed</li>
+      <li>Clinical Status: active</li>
+      <li>Histology Morphology Behavior: Adenocarcinoma, no subtype, intermediate grade</li>
+      <li>Staging: IIB (based on TNM approach)</li>
+    </ul>
+  </li>
+  <li>Specific staging details (TNM)
+    <ul>
+      <li>Stage: IIB</li>
+      <li>Primary Tumor (T): cT3</li>
+      <li>Regional Lymph Nodes (N): cN0</li>
+      <li>Distant Metastases (M): cM0</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="potential-representation">Potential Representation</h3>
+
+<p>Examples in this IG provide a potential representation. These were taken and adapted from the pre-STU3 <a href="https://build.fhir.org/ig/HL7/fhir-mCODE-ig/index.html">build</a> version of the mCODE IG in mid-December 2022.</p>
+<ul>
+  <li><a href="Condition-scenario-clinicalDxAndStaging-primaryCondition.html">Primary Diagnosis</a></li>
+  <li><a href="Observation-scenario-clinicalDxAndStaging-tnmStage.html">TNM Staging Details</a>
+    <ul>
+      <li><a href="Observation-scenario-clinicalDxAndStaging-tnmStage-tumor.html">Primary Tumor (T)</a></li>
+      <li><a href="Observation-scenario-clinicalDxAndStaging-tnmStage-regionalLymphNodes.html">Regional Lymph Nodes (N)</a></li>
+      <li><a href="Observation-scenario-clinicalDxAndStaging-tnmStage-distantMetastases.html">Distant Metastases (M)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="challenges-and-open-questions">Challenges and Open Questions</h3>
+
+<p>Operationalizing this sort of testing will require overcoming several challenges, including</p>
+<ul>
+  <li>Agreeing on a set of widely-relevant scenarios with a clear consistent representation: this testing pre-supposes that there is a set of scenarios that can be agreed-upon from the clinical perspective. The hope is that different possible scenarios and documentation approaches can be recognized while still identifying specific approaches on which the tests can help validate consistency across implementations.</li>
+  <li>Data entry: For these tests to be valid, data must be entered into the system as expected from workflows. For the above scenario that would be entered by a clinician. This means that as a part of the test, this data entry will need to be performed (or potentially simulated), which is potentially costly. The hope is that by showing the value of this type of testing, systems will see the benefit in investing in tools to support it and make the process easier.</li>
+  <li>Acceptable differences: the precise definition of “closely coincide” will be tricky. The goal is to help engender consistency, not inflexibility. We know that some aspects like temporality, system metadata, and specific instance ids should not be expected to be consistent or fixed. The hope is that experience with this kind of testing will help to clarify what checks are actually needed.</li>
+  <li>Identifying the reason for discrepancies and fixing it: if a test run identifies a difference, is that due to a problem in the implementation, or simply a data entry problem? A process for determining the answer and resolving it in a way that preserves the semantics of the data will be needed. The hope is that defining the scenarios well will make it possible to distinguish.</li>
+</ul>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="https://karlnaden.github.io/mCODE-testing-ig">MITRE</a>.  Package mcodetestingig#0.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Dec 31, 2022 05:18+0000">2022-12-31</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
