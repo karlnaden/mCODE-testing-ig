@@ -31,7 +31,7 @@ Feedback welcome on all of these, in particular in the form of a mCODE represent
 
 ### Potential Representation
 
-Examples in this IG provide a potential representation:
+Examples in this IG provide a potential representation. These were taken and adapted from the pre-STU3 [build](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/index.html) version of the mCODE IG in mid-December 2022.
 - [Primary Diagnosis](Condition-scenario-clinicalDxAndStaging-primaryCondition.html)
 - [TNM Staging Details](Observation-scenario-clinicalDxAndStaging-tnmStage.html)
   - [Primary Tumor (T)](Observation-scenario-clinicalDxAndStaging-tnmStage-tumor.html)

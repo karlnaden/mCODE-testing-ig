@@ -78,6 +78,7 @@ menu:
   Home: index.html
   Tests:
     Search and Read Tests: search-and-read-tests.html
+    Scenario Consistency Tests: scenario-tests.html
     Must Support Read Tests: must-support-read-tests.html
     Must Support Write Tests: must-support-write-tests.html
   
